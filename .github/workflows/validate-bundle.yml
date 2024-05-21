@@ -16,10 +16,6 @@ jobs:
         with:
           node-version: lts/*
           cache: yarn
-      - name: List changed files
-        id: changed-files
-        run: |
-          echo "CHANGED_FILES=$(git diff --name-only HEAD^ HEAD)" >> $GITHUB_ENV
       - name: Retrieve Scripts
         run: |
           git clone https://github.com/forcedotcom/bundle-publish-scripts.git
